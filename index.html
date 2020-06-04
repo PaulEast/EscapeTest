@@ -41,8 +41,10 @@ function checkAnswer(){
 }
 
 function checkCookie(){
-    updateText.cookieText=getCookie(name);
+  alert(document.cookie);
+  updateText.cookieText=getCookie(name);
 }
+
 </script>
 
 <html>
@@ -52,7 +54,7 @@ function checkCookie(){
     <span id="updateText"></span>
     <br/>
     <br/>
-    <button onclick="checkCookie();">Cookie info</button> 
-    <span id="cookieText"></span>   
+    <button onclick="checkCookie();">Cookie info</button>
+    <span id="cookieText"></span>
   </body>
 </html>
