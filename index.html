@@ -39,6 +39,10 @@ function checkAnswer(){
     setCookie("username", answer.value, 365);
   }
 }
+
+function checkCookie(){
+    updateText.innerText=getCookie(name);
+}
 </script>
 
 <html>
@@ -46,5 +50,9 @@ function checkAnswer(){
     <input type="text" id="answer">
     <button onclick="checkAnswer();">Check</button>
     <span id="updateText"></span>
+    <br>
+    <br>
+    <button onclick="checkCookie();">Cookie info</button> 
+    <span id="cookieText"></span>   
   </body>
 </html>
