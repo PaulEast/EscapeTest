@@ -33,10 +33,10 @@ function checkAnswer(){
   if(answer.value=="x"){
     updateText.innerText="That looks good";
     alert(document.cookie);
-    setCookie("name", answer.value, 365);
+    setCookie('name', answer.value, 365);
   }else{
     updateText.innerText="Sorry, that doesn't look quite right";
-    setCookie("name", answer.value, 365);
+    setCookie('name', answer.value, 365);
   }
 }
 
