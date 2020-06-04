@@ -32,10 +32,11 @@ function alertCookie() {
 function checkAnswer(){
   if(answer.value=="x"){
     updateText.innerText="That looks good";
-    setCookie("username", answer.value, 365);
+    alert(document.cookie);
+    setCookie("name", answer.value, 365);
   }else{
     updateText.innerText="Sorry, that doesn't look quite right";
-    setCookie("username", answer.value, 365);
+    setCookie("name", answer.value, 365);
   }
 }
 
