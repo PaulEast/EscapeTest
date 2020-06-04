@@ -12,7 +12,6 @@ function setCookie(cname, cvalue, exdays) {
 
 function getCookie(cname) {
   var name = cname + "=";
-  alert(name);
   var ca = document.cookie.split(';');
   for(var i = 0; i < ca.length; i++) {
     var c = ca[i];
@@ -42,7 +41,7 @@ function checkAnswer(){
 }
 
 function checkCookie(name){
-  cookieText.innerText=getCookie('name');
+  cookieText.innerText=getCookie(name);
 }
 
 </script>
