@@ -36,7 +36,6 @@ function checkAnswer(){
     setCookie("username", answer.value, 365);
   }else{
     updateText.innerText="Sorry, that doesn't look quite right";
-    document.cookie = "name=xyz";
     setCookie("username", answer.value, 365);
   }
 }
