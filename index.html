@@ -44,8 +44,8 @@ function checkCookie(name){
   cookieText.innerText=getCookie(name);
 }
 
-function killCookie(){
-  document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+function killCookie(name){
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }
 
 </script>
@@ -61,6 +61,6 @@ function killCookie(){
     <span id="cookieText"></span>
     <br/>
     <br/>
-    <button onclick="killCookie();">Kill cookie</button>
+    <button onclick="killCookie(name);">Kill cookie</button>
   </body>
 </html>
