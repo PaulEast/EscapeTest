@@ -1,0 +1,51 @@
+
+
+<script>
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  console.log("Wrting cookie: " + cname + " " + cvalue + " " + expires);
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function alertCookie() {
+  alert(document.cookie);
+}
+
+function checkAnswer(){
+  if(answer.value=="x"){
+    updateText.innerText="That looks good";
+    alert(document.cookie);
+    setCookie("username", answer.value, 365);
+  }else{
+    updateText.innerText="Sorry, that doesn't look quite right";
+    document.cookie = "name=xyz";
+    setCookie("username", answer.value, 365);
+  }
+}
+</script>
+
+<html>
+  <body onload="alertCookie()">
+    <input type="text" id="answer">
+    <button onclick="checkAnswer();">Check</button>
+    <span id="updateText"></span>
+  </body>
+</html>
